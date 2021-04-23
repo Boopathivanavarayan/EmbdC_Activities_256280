@@ -1,6 +1,6 @@
 # Embedded C Activity 1
 
-# Setting Status of Heater Led in action 
+### Setting Status of Heater Led 
 
 #### Heater Led Status 
 | LED ON | LED OFF |

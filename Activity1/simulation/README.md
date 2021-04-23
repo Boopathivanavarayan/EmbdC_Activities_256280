@@ -1,9 +1,9 @@
 # Activity1 In Action
 
-### Heater Led Status 
+#### Heater Led Status 
 | LED ON | LED OFF |
 | :--: | :--: |
-|![LED ON](simulation/LED_ON.png)|![LED OFF](simulation/LED_OFF.png)|
+|![LED ON](https://github.com/Boopathivanavarayan/EmbdC_Activities_256280/blob/main/Activity1/simulation/LED_ON.PNG)|![LED OFF](https://github.com/Boopathivanavarayan/EmbdC_Activities_256280/blob/main/Activity1/simulation/LED_OFF.PNG)|
 
 
 ### Code 

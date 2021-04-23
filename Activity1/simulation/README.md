@@ -6,11 +6,15 @@
 
 ## Code 
 ```
-	for(;;)
-	{
-        change_led_state(HIGH);
-		delay_ms(LED_ON_TIME);
-        change_led_state(LOW);
-		delay_ms(LED_OFF_TIME);	
-	}
+	while(1){
+        FLAG1 = !(PIND & (1<< BUTTON_SW));
+        FLAG2 = !(PIND & (1<< HEATER_SW));
+        if(FLAG1 & FLAG2){
+            _delay_ms(20);
+            PORTB |= (1<< HEATER_LED);
+        }
+        else{
+            PORTB &= ~(1<< HEATER_LED);
+        }
+    }
 ```

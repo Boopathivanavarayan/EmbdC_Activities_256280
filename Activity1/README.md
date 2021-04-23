@@ -11,7 +11,5 @@
 
 |Build|Cppcheck|
 |:--:|:--:|
-|[![Compile-Linux](https://github.com/Boopathivanavarayan/EmbdC_Activities_256280/Activity1/actions/workflows/Compile.yml/badge.svg)](https://github.com/Boopathivanavarayan/EmbdC_Activities_256280/Activity1/actions/workflows/Compile.yml)|[![Cppcheck](https://github.com/Boopathivanavarayan/EmbdC_Activities_256280/Activity1/actions/workflows/CodeQulaity.yml/badge.svg)](https://github.com/Boopathivanavarayan/EmbdC_Activities_256280/Activity1/actions/workflows/CodeQulaity.yml)|
+|[![Compile-Linux](https://github.com/Boopathivanavarayan/EmbdC_Activities_256280/actions/workflows/Compile.yml/badge.svg)](https://github.com/Boopathivanavarayan/EmbdC_Activities_256280/actions/workflows/Compile.yml)|[![Cppcheck](https://github.com/Boopathivanavarayan/EmbdC_Activities_256280/actions/workflows/CodeQulaity.yml/badge.svg)](https://github.com/Boopathivanavarayan/EmbdC_Activities_256280/actions/workflows/CodeQulaity.yml)|
 
-## Wiki Documentation
-* System [SETUP](https://github.com/Boopathivanavarayan/EmbdC_Activities_256280/Activity1/wiki)

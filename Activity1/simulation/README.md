@@ -1,10 +1,12 @@
-# Blinky Project In Action
+# Activity1 In Action
 
-|ON|OFF|
-|:--:|:--:|
-|\image html ON.png||
+### Heater Led Status 
+| LED ON | LED OFF |
+| :--: | :--: |
+|![LED ON](simulation/LED_ON.png)|![LED OFF](simulation/LED_OFF.png)|
 
-## Code 
+
+### Code 
 ```
 	while(1){
         FLAG1 = !(PIND & (1<< BUTTON_SW));

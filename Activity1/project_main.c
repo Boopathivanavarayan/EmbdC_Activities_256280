@@ -1,7 +1,7 @@
 /**
  * @file project_main.c
- * @author Bharath.G ()
- * @brief Project to Blink an LED at 1000ms ON and 500 ms OFF Interval
+ * @author Bopathi vanavarayan ()
+ * @brief Activity1: Button switch input and Heater switch input deciding status of Heater Led 
  * @version 0.1
  * @date 2021-04-23
  * 

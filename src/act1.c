@@ -1,45 +1,33 @@
 /**
- * @file project_main.c
- * @author Bopathi vanavarayan ()
- * @brief Activity1: Button switch input and Heater switch input deciding status of Heater Led 
+ * @file act1.c
+ * @author Boopathi Vanavarayan 
+ * @brief Activity1: Status of Heater Led Actuator based on Button sensor and Heater switch input 
  * @version 0.1
- * @date 2021-04-23
+ * @date 2021-04-28
  * 
  * @copyright Copyright (c) 2021
  * 
  */
-#include "project_config.h"
 
 #include "act1.h"
+#include <avr/io.h>
+#include <util/delay.h>
+
 
 unsigned volatile FLAG1 = 0; // button sensor at driver seat
 unsigned volatile FLAG2 = 0; // heater switch
-
+unsigned volatile HEATER_LED_STATUS = 0;
 /**
- * @brief Initialize all the Peripherals and pin configurations
+ * @brief Activity 1 Function
  * 
- */
-void peripheral_init(void)
-{
-	/* Configure LED Pin */
-	DDRD &= ~(1<< BUTTON_SW) & ~(1<< HEATER_SW); 
-    DDRB |= (1<< HEATER_LED); 
-    PORTD |= (1<< BUTTON_SW) | (1<< HEATER_SW );
-
-}
-
-
-/**
- * @brief Main function where the code execution starts
- * 
- * @return int Return 0 if the program completes successfully
+ * @return int Return 1 if LED Actuator is ON else Return 0
  * @note HEATER_LED TURNS ON FOR ON CONDITIONS OF BOTH SPDT SWITCHES BUTTON_SW and HEATER_SW  
  * @note HEATER_LED TURNS OFF FOR OTHER CONDITIONS OF SPDT SWITCHES BUTTON_SW and HEATER_SW  
  */
-int main(void)
+void act1(void)
 {
 	/* Initialize Peripherals */
-	peripheral_init();
+	PeripheralInit();
 
 	while(1){
         FLAG1 = !(PIND & (1<< BUTTON_SW));
@@ -47,11 +35,12 @@ int main(void)
         if(FLAG1 & FLAG2){
             _delay_ms(20);
             PORTB |= (1<< HEATER_LED);
+            HEATER_LED_STATUS = 1;
         }
         else{
             PORTB &= ~(1<< HEATER_LED);
+            HEATER_LED_STATUS = 0;
         }
     }
-
-	return 0;
+    
 }

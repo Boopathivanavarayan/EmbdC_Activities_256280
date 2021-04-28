@@ -1,9 +1,18 @@
-PROJ_NAME = ACT1
+PROJ_NAME = SeatHeatingApp
 
 BUILD_DIR = Build
 
 # All Source code files
-SRC = project_main.c
+SRC = SeatHeatingApp.c\
+src/act1.c\
+src/act2.c\
+src/act3.c\
+src/act4.c\
+src/InitADC.c\
+src/PeripheralInit.c\
+src/PWMInit.c\
+src/ReadADC.c\
+src/USARTInit.c
 
 # All header file paths
 INC = -I inc

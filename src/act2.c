@@ -20,7 +20,7 @@
 unsigned volatile int temp;
 void act2(void)
 {
-    InitADC();
+    
     unsigned volatile int ch = SLIDER_CH;
     while(1){
         temp = ReadADC(ch);

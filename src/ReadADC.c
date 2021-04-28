@@ -8,6 +8,7 @@
  * @return uint16_t 
  */
 int ReadADC(unsigned volatile int ch){
+     InitADC();
      //Read ADC channel ch from 0-7
      ADMUX  &= 0xf8;
      ch = ch & 0b00000111;

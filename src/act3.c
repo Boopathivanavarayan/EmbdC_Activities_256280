@@ -24,7 +24,7 @@
  */
 int pwm=0;
 int act3(int pwm){
-    PWMInit();
+    PWM_Init();
     int comp = pwm*0.01*255 - 1;
     while(1){
         OCR0A = comp;

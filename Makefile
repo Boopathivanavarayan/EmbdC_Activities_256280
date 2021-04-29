@@ -10,7 +10,7 @@ src/act3.c\
 src/act4.c\
 src/InitADC.c\
 src/PeripheralInit.c\
-src/PWMInit.c\
+src/PWM_Init.c\
 src/ReadADC.c\
 src/USARTInit.c
 

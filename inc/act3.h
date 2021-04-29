@@ -22,6 +22,6 @@ extern int pwm;
  * 
  */
 int act3(int );
-void PWMInit(void);
+void PWM_Init(void);
 
 #endif /** __ACT3_H_ */

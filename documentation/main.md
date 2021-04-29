@@ -1,1 +1,1 @@
-@mainpage Embd-C Activity 1 by Boopathi Vanavarayan @subpage project_main.c
+@mainpage Embedded C CaseStudy by Boopathi Vanavarayan @subpage SeatHeatingApp.c

@@ -24,12 +24,11 @@
  */
 extern unsigned volatile int temp;
 
-
 /**
- * @brief Function Corresponding to Activity 2
+ * @brief Related Functions of Activity 2 
  * 
  */
-void act2(void );
+unsigned volatile int act2(void);
 void InitADC(void );
 int ReadADC(unsigned volatile int );
 #endif /** __ACT2_H_ */

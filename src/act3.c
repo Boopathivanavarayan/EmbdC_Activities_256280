@@ -1,7 +1,16 @@
+/**
+ * @file act3.c
+ * @author Boopathi Vanavarayan 
+ * @brief Activity3: Generating diffierent PWM for different levels of temperature
+ * @version 0.1
+ * @date 2021-04-28
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "act3.h"
 #include <avr/io.h>
 #include <util/delay.h>
-
 
 /**
  * @brief This function generate PWM signal with specified percentage duty cycle
@@ -14,12 +23,13 @@
  * @note Compare value for % duty cycle is 255*duty_cycle(%)-1 
  */
 int pwm=0;
-void act3(int pwm){
+int act3(int pwm){
     PWMInit();
     int comp = pwm*0.01*255 - 1;
     while(1){
         OCR0A = comp;
         _delay_ms(200);
+        return 1;
     }
 
 }

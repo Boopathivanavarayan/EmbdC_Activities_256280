@@ -9,32 +9,40 @@
  * 
  */
 
-
 #include "act1.h"
 #include "act2.h"
 #include "act3.h"
 #include "act4.h"
+#include <avr/io.h>
 
 int main(){
-    act1();
-    if(HEATER_LED_STATUS){
-        act2();
-        if(temp >= 0 && temp<= 200){
-            act3(20);
-            act4(20);
-        }
-        else if(temp >= 210 && temp <= 500){
-            act3(40);
-            act4(40);
-        }
-        else if(temp >= 510 && temp <= 700){
-            act3(70);
-            act4(70);
-        }
-        else if(temp >= 710 && temp <= 1024){
-            act3(95);
-            act4(95);
-        }
-    }
+   unsigned volatile int temp_in_ADC;
+   while(1)
+   {
+       if(act1()){
+           temp_in_ADC = act2();
+           if( temp_in_ADC >= 0 && temp_in_ADC<= 200){
+               if(act3(20))
+                act4(20);
+            }
+            else if(temp_in_ADC >= 210 && temp_in_ADC <= 500){
+            if(act3(40))
+                act4(40);
+            }
+            else if(temp_in_ADC >= 510 && temp_in_ADC <= 700){
+            if(act3(70))
+                act4(70);
+            }
+            else if(temp_in_ADC >= 710 && temp_in_ADC <= 1024){
+            if(act3(95))
+                act4(95);
+            }
+       }
+       else{
+           ADC = 0;
+           DDRD &= ~(1<<PD6);
+       }
+   }
+   
     return 0;
 }

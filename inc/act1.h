@@ -12,6 +12,7 @@
  */
 
 #define F_CPU 16000000UL 	/**< Clock Frequency of MCU is 16 MHz */
+
 /**
  * @brief Macro definitions for Activity 1
  * 
@@ -27,10 +28,10 @@
 extern unsigned volatile HEATER_LED_STATUS;
 
 /**
- * @brief Function Corresponding to Activity 1
+ * @brief Related Functions of Activity 1 
  * 
  */
-void act1(void);
+int act1(void);
 void PeripheralInit();
 
 

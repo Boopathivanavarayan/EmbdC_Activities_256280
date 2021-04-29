@@ -16,11 +16,12 @@
  * 
  */
 extern int pwm;
+
 /**
- * @brief Function Corresponding to Activity 3
+ * @brief Related Functions of Activity 3 
  * 
  */
-
+int act3(int );
 void PWMInit(void);
-void act3(int);
+
 #endif /** __ACT3_H_ */

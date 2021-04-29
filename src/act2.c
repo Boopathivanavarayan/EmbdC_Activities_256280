@@ -1,4 +1,14 @@
 
+/**
+ * @file act2.c
+ * @author Boopathi Vanavarayan 
+ * @brief Activity2: reading analog values from set temperature slider potentiometer  
+ * @version 0.1
+ * @date 2021-04-28
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "act2.h"
 #include <avr/io.h>
 #include <util/delay.h>
@@ -18,12 +28,13 @@
   
  */
 unsigned volatile int temp;
-void act2(void)
+unsigned volatile int act2()
 {
     
     unsigned volatile int ch = SLIDER_CH;
     while(1){
         temp = ReadADC(ch);
         _delay_ms(20);
+        return temp;
     }
 }

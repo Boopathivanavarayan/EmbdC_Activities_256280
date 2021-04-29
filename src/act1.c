@@ -24,7 +24,7 @@ unsigned volatile HEATER_LED_STATUS = 0;
  * @note HEATER_LED TURNS ON FOR ON CONDITIONS OF BOTH SPDT SWITCHES BUTTON_SW and HEATER_SW  
  * @note HEATER_LED TURNS OFF FOR OTHER CONDITIONS OF SPDT SWITCHES BUTTON_SW and HEATER_SW  
  */
-void act1(void)
+int act1(void)
 {
 	/* Initialize Peripherals */
 	PeripheralInit();
@@ -36,10 +36,12 @@ void act1(void)
             _delay_ms(20);
             PORTB |= (1<< HEATER_LED);
             HEATER_LED_STATUS = 1;
+            return HEATER_LED_STATUS;
         }
         else{
             PORTB &= ~(1<< HEATER_LED);
             HEATER_LED_STATUS = 0;
+            return HEATER_LED_STATUS;
         }
     }
     
